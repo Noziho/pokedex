@@ -12,6 +12,7 @@ const PokemonList = () => {
         async function getPokemonData()
         {
             let pokemons = await getAllPokemon();
+            //Promise.all wait all promise inside her are finished before return a promise which contains all finished promise
             await Promise.all(
                 pokemons.data.results.map(async (pokemon) => {
                     const pokemonDetails = await getPokemonDetails(pokemon.url);
