@@ -27,7 +27,7 @@ const PokemonList = () => {
 
 
     return(
-        <div>
+        <div className={'pokemonListContainer'}>
             {isLoading?<Loader />:
                 details.map((pokemon) => {
                     return <PokemonCard key={pokemon.name} pokemon={pokemon} />

@@ -13,8 +13,32 @@ header {
     background: #04a2e0;
 }
 
+body {
+    background: #1a1a1a;
+}
+
 #root {
     display: flex;
     flex-flow: wrap;
+    width: 100%;
+}
+
+.pokemonListContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.pokemonCard {
+    width: 20rem;
+    min-height: 10rem;
+    background: #FFFAFA;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#loader {
     width: 100%;
 }
