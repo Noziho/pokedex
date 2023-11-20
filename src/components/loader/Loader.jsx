@@ -1,5 +1,5 @@
 import React from 'react'
-import loaderGif from '../../assets/img/loader.gif'
+import loaderGif from '../../assets/img/loader2.gif'
 const Loader = () => {
     return (
         <div>

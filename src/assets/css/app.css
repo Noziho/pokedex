@@ -7,6 +7,10 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
+* a {
+    color: #b5b5b5;
+    text-decoration: none;
+}
 
 header {
     width: 100%;
@@ -36,11 +40,30 @@ body {
 .pokemonCard {
     width: 20rem;
     min-height: 10rem;
-    background: #FFFAFA;
+    background: #252525;
     margin: 1rem;
     padding: 1rem;
 }
 
 #loader {
     width: 100%;
+}
+
+.pokemonDetailContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.pokemonDetail {
+    background: #252525;
+    padding: 3rem;
+    width: 40%;
+    margin-top: 10rem;
+}
+
+.pokemonDetail > div, .pokemonDetail > div > p {
+    margin: 1rem;
 }
