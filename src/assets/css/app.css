@@ -14,7 +14,7 @@ html {
 
 header {
     width: 100%;
-    background: #04a2e0;
+    background: #015c7f;
 }
 
 body {
@@ -85,3 +85,18 @@ body {
     color: #b5b5b5;
 }
 
+.paginationContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.buttonContainer {
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 4rem;
+    background: #252525;
+    color: #b5b5b5;
+    border: none;
+}

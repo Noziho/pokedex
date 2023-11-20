@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Header from "../components/Header.jsx";
 import PokemonList from "../components/PokemonList.jsx";
 import SearchBar from "../components/SearchBar.jsx";
