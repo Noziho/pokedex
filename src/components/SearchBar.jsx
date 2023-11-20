@@ -8,7 +8,9 @@ const SearchBar = () => {
         return values && navigate(`/pokemon/${values.toLowerCase()}`)
     }
     return (
-        <input type="search" placeholder={'Pokemon name ...'} onBlur={(e) => handleChange(e.target.value, e)}/>
+        <div className={'searchBarContainer'}>
+            <input className={'search'} type="search" placeholder={'Pokemon name ...'} onBlur={(e) => handleChange(e.target.value, e)}/>
+        </div>
     )
 }
 export default SearchBar
