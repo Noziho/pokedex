@@ -8,18 +8,18 @@ const PokemonList = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        let testDetails = []
+        let tempPokemonDetails = []
         async function getPokemonData()
         {
             let pokemons = await getAllPokemon();
             await Promise.all(
                 pokemons.data.results.map(async (pokemon) => {
                     const pokemonDetails = await getPokemonDetails(pokemon.url);
-                    testDetails.push(pokemonDetails.data)
+                    tempPokemonDetails.push(pokemonDetails.data)
 
                 })
             )
-            setDetails(testDetails)
+            setDetails(tempPokemonDetails)
             setIsLoading(false)
         }
         getPokemonData();
