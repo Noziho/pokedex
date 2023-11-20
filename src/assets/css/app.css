@@ -1,0 +1,20 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    background: #04a2e0;
+}
+
+#root {
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+}
