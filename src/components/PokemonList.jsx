@@ -4,33 +4,39 @@ import Loader from "./loader/Loader.jsx";
 import PokemonCard from "./PokemonCard.jsx";
 
 const PokemonList = () => {
-    const [pokemon, setPokemon] = useState([]);
     const [details, setDetails] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-         getAllPokemon()
-            .then((res) => {
-                setPokemon(res.data.results)
+        let testDetails = []
+        async function getPokemonData()
+        {
+            let pokemons = await getAllPokemon();
+            await Promise.all(
+                pokemons.data.results.map(async (pokemon) => {
+                    const pokemonDetails = await getPokemonDetails(pokemon.url);
+                    testDetails.push(pokemonDetails.data)
 
-                let data = [];
-                res.data.results.forEach((pokemon) => {
-                    getPokemonDetails(pokemon.url)
-                        .then((response) => {
-                            data.push(response.data)
-                            setIsLoading(false)
-                        })
                 })
-                setDetails(data);
-            })
-    }, []);
+            )
+            setDetails(testDetails)
+            setIsLoading(false)
+        }
+        getPokemonData();
+    }, [])
 
 
     return(
         <div>
-            {isLoading? <Loader /> : console.log("DETAILS =>", details)}
+            {isLoading?<Loader />:
+                details.map((pokemon) => {
+                    return <PokemonCard key={pokemon.name} pokemon={pokemon} />
+                })}
         </div>
     )
+
+
+
 
 
 }
