@@ -25,8 +25,8 @@ const PokemonList = () => {
 
                 })
             )
-            setDetails(tempPokemonDetails)
-            setIsLoading(false)
+            setDetails(tempPokemonDetails);
+            setIsLoading(false);
         }
         getPokemonData();
     }, [])
